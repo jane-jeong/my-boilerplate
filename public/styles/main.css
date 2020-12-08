@@ -1,0 +1,220 @@
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
+
+
+/* --------------------Start of html and body--------------------*/
+html {
+margin: 0; 
+width: 100%;
+height: 100%;
+font-size: 14px;  
+line-height: 2px; 
+letter-spacing: 1.5px; 
+font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+margin: 0;
+width: 100%;
+height: 100%;
+margin: 0;
+/*
+background-size: 80px 80px;
+background-color: #111111;
+background-image:
+linear-gradient(to right, #777777 1px, transparent 1px),
+linear-gradient(to bottom, #777777 1px, transparent 1px);
+color: #ffffff; 
+*/
+
+/*백그라운드에 이미지를 넣을 때*/
+background-image: url("/images/blur_apple_mobile.jpg");
+
+width: 100%;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+a { text-decoration:none }
+
+/* --------------------End of html and body--------------------*/
+
+
+/* ----------------------Start of navbar---------------------*/
+/* --------------------nav: frosted glass--------------------*/
+.nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8%;
+      background: rgba(255,255,255,0.4);
+      border-bottom: 0px solid rgba(225,225,225,0.5);
+      z-index: 1000;
+      display: flex ; 
+      justify-content: space-evenly ;
+      align-items : center;
+      flex-wrap: wrap; 
+      backdrop-filter: saturate(180%) blur(40px);
+      list-style: none; 
+}
+
+.nav ul {
+      list-style: none;
+      text-align: center;
+      white-space: nowrap;
+      padding-right: 32px;
+}
+
+.nav ul li {
+display: inline-block;
+}
+
+.nav ul li a {
+padding: 10px 10px;
+transition: background 0.4s, text-shadow 0.4s;
+cursor: pointer;
+}
+
+.nav ul li a:hover {
+background: rgba(255,255,255, 0.2);
+text-shadow: 0 1px 5px rgba(0,0,0,0.15);
+}
+
+.navbar_logo a {
+font-size: 24px; 
+color:#55ff71;    /* #8400ff; #cc0070; ##8c00c4; */ 
+font-family: 'Castoro', serif;
+}
+
+.navbar_logo a:hover {
+background-color:  #FA1E4B;
+}
+
+.navbar_about a:hover {
+background-color:#55ff71; 
+color: #000000;
+}
+
+.navbar_about a, #today, #timer {
+color: #3a3a3a;
+}
+
+#today::selection {
+background-color: #00e1ff; 
+color: #000000;
+}
+
+#timer::selection {
+background-color: yellow;
+color: #000000;  
+}
+
+/* --------------------End of navbar--------------------*/
+
+.buttons {
+position: absolute;
+top: 50%; 
+left: 50%; 
+width: 70%; 
+height: 50%; 
+transform: translate(-50%, -50%);
+display: flex; 
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.buttons button {
+width: 25%;
+height: 40%;
+border-radius: 2em;
+box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+background-color: #111111;
+border: 2px solid #333333;
+color: #55ff71;
+cursor: pointer;
+align-self: center;
+font-size: 16px;
+flex-shrink: 1;
+}
+
+.buttons button:active{
+transform : scale(0.98);
+}
+
+.buttons button:hover{
+color:  #FA1E4B;
+}
+
+/* --------------------Footer--------------------*/
+
+footer {
+position: absolute;
+bottom: 0;
+margin: 0;
+width: 100%;
+height: 4vh;
+display: flex;
+flex-direction: row;
+justify-content: center; 
+align-items: center;
+background-color: #d3d3d3;
+}
+
+footer small {
+padding: 1em 1em 1em 0em;
+font-size: 6px;
+text-align: left;
+color: #999999;
+}
+
+
+
+/* -----navbar 반응형 작업----- */
+@media screen and (max-width: 768px) {
+
+.navbar { 
+flex-direction: column; 
+justify-content: space-evenly;
+align-items: flex;
+height: 20%;
+}
+
+.navbar_logo {
+align-items: center; 
+width: 100%;
+text-align: center;
+padding: 5% 0% -5% 0%;
+}
+
+#today, #timer, .navbar_about a {
+flex-direction: column; 
+align-items: center; 
+width: 100%;
+}
+
+.buttons {
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: flex;
+flex-wrap: wrap;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
